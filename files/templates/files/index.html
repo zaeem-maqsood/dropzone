@@ -1,0 +1,339 @@
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Album example · Bootstrap v5.3</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+
+    <main>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Album example</h1>
+            <p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>
+        </div>
+        </div>
+    </section>
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post" action="/" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">{% csrf_token %}
+                    <!-- this is were the previews should be shown. -->
+                    <div class="previews"></div>
+                    
+                    <!-- Now setup your input fields -->
+                    <input type="email" name="username" />
+                    <input type="password" name="password" />
+
+                    <button type="submit">Submit data and files!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-body-secondary">9 mins</small>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class="text-body-secondary py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <script>
+        let myDropzone = new Dropzone("#my-awesome-dropzone", {
+            autoProcessQueue: false,
+            uploadMultiple: true,
+            parallelUploads: 100,
+            maxFiles: 100,
+            addRemoveLinks: true,
+            acceptedFiles: 'image/*',
+            // The setting up of the dropzone
+            init: function() {
+                var myDropzone = this;
+
+                // First change the button to actually tell Dropzone to process the queue.
+                this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
+                // Make sure that the form isn't actually being sent.
+                e.preventDefault();
+                e.stopPropagation();
+                myDropzone.processQueue();
+                });
+
+                // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
+                // of the sending event because uploadMultiple is set to true.
+                this.on("sendingmultiple", function() {
+                // Gets triggered when the form is actually being sent.
+                // Hide the success button or the complete form.
+                });
+                this.on("successmultiple", function(files, response) {
+                // Gets triggered when the files have successfully been sent.
+                // Redirect user or notify of success.
+                });
+                this.on("errormultiple", function(files, response) {
+                // Gets triggered when there was an error sending the files.
+                // Maybe show form again, and notify user of error
+                });
+            }
+        });
+       </script>
+    </body>
+</html>
